@@ -1,0 +1,18 @@
+{% extends 'virtualtrainer/base.html' %}
+
+{% block css %}
+{% endblock %}
+{% block main %}
+  {% load static from staticfiles %}
+  <img src="{% static "virtualtrainerimages/front.png" %}" alt="Front" height="375" width="200"/>
+  <img  src="{% static "virtualtrainerimages/back.png" %}" alt="Back" height="375" width="200" />
+  <div style="position:absolute; left:50%; top:25%;">
+    <div class="btn-group btn-group-vertical" data-toggle="buttons">
+      <div align="center"><br>
+      <input type="radio" name="back" value="BACK">BACK<br>
+      <input type="radio" name="chest" value="CHEST">CHEST<br>
+      <input type="radio" name="abs" value="ABS">ABS<br>
+      <input type="radio" name="legs" value="LEGS">LEGS<br>
+    </div>
+  </div>
+{% endblock %}

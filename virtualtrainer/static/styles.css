@@ -1,0 +1,28 @@
+body {
+  background-color: brown;
+}
+
+.btn {
+  padding: 5px 10px;
+  border: 0 none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.inline {
+  display: inline;
+  padding: 5px 10px;
+}
+
+.container {
+  padding: 10px 20px;
+}
+
+h2 {
+  display: inline;
+  padding: 50px 55px;
+  font-size: 20px;
+  text-align: center;
+  color: #55ffee;
+}
