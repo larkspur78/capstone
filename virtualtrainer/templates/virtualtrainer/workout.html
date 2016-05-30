@@ -1,0 +1,10 @@
+{% extends 'virtualtrainer/base.html' %}
+{% block css %}
+{% endblock %}
+{% block main %}
+  <p>This is a test for workout.html page</p>
+
+  {% for muscle in workout %}
+      {{ muscle }}
+  {% endfor %}
+{% endblock %}

@@ -9,4 +9,18 @@ def virtualtrainer_home(request):
 
 
 def select_musclegroup(request):
-    return render(request, 'virtualtrainer/musclegroups.html')
+
+    if request.method == "POST":
+        muscle = request.POST.getlist('muscle')
+        # form = SelectMusclesForm(request.POST, instance=muscle)
+        # if muscle.is_valid():
+        #     muscle = form.save(commit=False)
+        #     muscle.save()
+        return redirect('workout',)
+    else:
+    #     muscle = get_object_or_404(MuscleGroup, )
+        return render(request, 'virtualtrainer/musclegroups.html')
+
+def workout(request):
+    workout = ['a', 'b']
+    return render(request, 'virtualtrainer/workout.html', {'workout': workout})
