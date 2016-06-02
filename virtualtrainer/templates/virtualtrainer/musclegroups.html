@@ -14,13 +14,14 @@
   <div style="position:absolute; left:50%; top:25%;">
     <div class="btn-group btn-group-vertical" data-toggle="buttons">
       <div><br>
-      <input type="checkbox" name="muscle" value="BACK">BACK<br>
-      <input type="checkbox" name="muscle" value="CHEST">CHEST<br>
-      <input type="checkbox" name="muscle" value="ABS">ABS<br>
-      <input type="checkbox" name="muscle" value="LEGS">LEGS<br>
+      <form action="/workout/" method="post">
+        {% csrf_token %}
+        <input type="checkbox" name="muscle" value="back">BACK<br>
+        <input type="checkbox" name="muscle" value="chest">CHEST<br>
+        <input type="checkbox" name="muscle" value="ab">ABS<br>
+        <input type="checkbox" name="muscle" value="legs">LEGS<br>
+        <button name="submit" value="workout">GET WORKOUT</button>
+      </form>
     </div>
   </div><br>
-  <form action="" method="post">{% csrf_token %}
-    <button name="submit" value="workout">GET WORKOUT</button>
-  </form>
 {% endblock %}
