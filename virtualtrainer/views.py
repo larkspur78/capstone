@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import MuscleGroup, Exercise
+import random
 
 # Create your views here.
 
@@ -23,8 +24,10 @@ def search(request):
 def workout(request):
     if request.method == "POST":
         muscle = request.POST.getlist('muscle')
+        exercises = list(Exercise.objects.filter(musclegroup__name__in=muscle))
+
         context = {
-            'exercises': Exercise.objects.filter(musclegroup__name__in=muscle)
+            'exercises': random.sample(exercises, 4)
         }
         return render(request, 'virtualtrainer/workout.html', context)
         # {'workout': Exercise.objects.filter(musclegroup__name__in=muscle)})
