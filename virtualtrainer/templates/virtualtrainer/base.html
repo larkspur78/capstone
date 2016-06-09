@@ -5,7 +5,7 @@
     <title>Virtual Trainer</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}"
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
   </head>
   <body>
     <div class="container">
@@ -13,7 +13,6 @@
       <a class="btn btn-default pull-right" href="{% url 'musclegroups' %}" role="button">Design New Workout</a>
       <a class="btn btn-default pull-right" href="{% url 'home' %}" role="button">Home</a>
     </div>
-
     {% block main %}
     {% endblock %}
     </div>

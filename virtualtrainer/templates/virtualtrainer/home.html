@@ -1,6 +1,20 @@
-{% extends 'virtualtrainer/base.html' %}
-{% block css %}
-{% endblock %}
-{% block main %}
-  <p>This is a test for home.html page</p>
-{% endblock %}
+
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Virtual Trainer</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+  </head>
+  <body>
+    <div class="wrapped">
+      <div class="homepagephoto"></div>
+      <h1 class="homepagetitle"><a href="{% url 'musclegroups' %}">VIRTUAL TRAINER</a></h1>
+      <div class="quote">
+        <h2>Don't Let Starting Stop You</h2>
+      </div>
+    </div>
+  </body>
+</html>

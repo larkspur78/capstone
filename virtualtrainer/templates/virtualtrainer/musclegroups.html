@@ -8,11 +8,12 @@
   <div class="container">
     <h2 class="inline">CHOOSE THE MUSCLE GROUPS YOU WISH TO STRENGTHEN</h2>
   </div>
-  <div class="container">
-  <img src="{% static "virtualtrainerimages/front.png" %}" alt="Front" height="375" width="200"/>
-  <img  src="{% static "virtualtrainerimages/back.png" %}" alt="Back" height="375" width="200" />
+  <div class="container-fluid">
+      <img src="{% static "virtualtrainerimages/front.png" %}" alt="Front"/>
+      <img  src="{% static "virtualtrainerimages/back.png" %}" alt="Back"/>
+  </div>
   <div style="position:absolute; left:50%; top:25%;">
-    <div class="btn-group btn-group-vertical" data-toggle="buttons">
+    <div class="btns" data-toggle="buttons">
       <div><br>
       <form action="/workout/" method="post">
         {% csrf_token %}

@@ -2,12 +2,13 @@ body {
   background-color: brown;
 }
 
-.btn {
+.btns {
   padding: 5px 10px;
   border: 0 none;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
+  
 }
 
 .inline {
@@ -19,10 +20,59 @@ body {
   padding: 10px 20px;
 }
 
-h2 {
-  display: inline;
+.imageback {
+  position: absolute;
+  padding: 20rem;
+  right: 50px;
+}
+
+.imagefront {
+  position: absolute;
+  padding: 30rem;
+  left: 50px;
+}
+
+.homepagetitle {
+  position: absolute;
+  box-sizing: border-box;
+  top: 16px;
+  right: 16px;
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif; font-size: 60px; font-style: normal; font-variant: normal; font-weight: 500;
+  padding: 10rem;
+  color: #00d9f9;
+}
+
+.homepagetitle a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.homepagetitle a {
+  color: #00d9f9;
+}
+
+.quote {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  padding: 5rem;
   padding: 50px 55px;
-  font-size: 20px;
-  text-align: center;
-  color: #55ffee;
+  color: #00d9f9;
+  font-family: 'Arial Black', Gadget, sans-serif; font-size: 30px; font-style: normal; font-variant: normal; font-weight: 300; line-height: 20px;
+}
+
+.homepagephoto {
+  background-position: center center;
+  background-image: url("/static/virtualtrainerimages/workout.jpg");
+  background-size: cover;
+  min-height: 50rem;
+  width: 100%;
+  vertical-align: middle;
+  opacity: .45;
+}
+
+.wrapped {
+  box-sizing: border-box;
+  padding: 3rem;
+  margin-top: 1rem;
 }
