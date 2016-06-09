@@ -6,15 +6,18 @@
     <title>Virtual Trainer</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
   </head>
   <body>
     <div class="wrapped">
       <div class="homepagephoto"></div>
       <h1 class="homepagetitle"><a href="{% url 'musclegroups' %}">VIRTUAL TRAINER</a></h1>
-      <div class="quote">
-        <h2>Don't Let Starting Stop You</h2>
+      <h2 class="quotes">Don't Let Starting Stop You</h2>
+      <h2 class="quotes">"Pay Attention. And Keep Breathing"</h2>
       </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src= "{% static 'quotes.js' %}" type="text/javascript"></script>
   </body>
 </html>
