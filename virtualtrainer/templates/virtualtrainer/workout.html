@@ -2,16 +2,20 @@
 {% block css %}
 {% endblock %}
 {% block main %}
-  <!-- <p>This is a test for workout.html page</p> -->
   <ul>
   {% for exercise in exercises %}
-
+  {% load markdown_filter %}
+  <html>
       <li>{{ exercise.name }}<br>
       <iframe title="YouTube video player"
       type="text/html"
       width="480" height="390" src="{{ exercise.video }}" frameborder="0" allowfullscreen></iframe><br>
-      {{ exercise.description }}<br>
       </li>
+
+      <div class="md-content">
+        {{ exercise.description|markdownify|safe }}
+      </div>
+    </html>
 
   {% endfor %}
   </ul>

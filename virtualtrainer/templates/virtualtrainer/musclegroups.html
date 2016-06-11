@@ -4,17 +4,13 @@
 
 {% endblock %}
 {% block main %}
-  {% load static from staticfiles %}
-  <div class="container">
-    <h2 class="inline">CHOOSE THE MUSCLE GROUPS YOU WISH TO STRENGTHEN</h2>
-  </div>
-  <div class="container-fluid">
-      <img src="{% static "virtualtrainerimages/front.png" %}" alt="Front"/>
-      <img  src="{% static "virtualtrainerimages/back.png" %}" alt="Back"/>
-  </div>
-  <div style="position:absolute; left:50%; top:25%;">
-    <div class="btns" data-toggle="buttons">
-      <div><br>
+{% load static from staticfiles %}
+<h2 class="inline">CHOOSE THE MUSCLE GROUPS YOU WISH TO STRENGTHEN</h2>
+<div class="container-fluid">
+  <img src="{% static "virtualtrainerimages/front.png" %}" alt="Front"/>
+  <img  src="{% static "virtualtrainerimages/back.png" %}" alt="Back"/>
+  <div class="btns" data-toggle="buttons">
+    <div>
       <form action="/workout/" method="post">
         {% csrf_token %}
         <input type="checkbox" name="muscle" value="back">BACK<br>
@@ -24,5 +20,6 @@
         <button name="submit" value="workout">GET WORKOUT</button>
       </form>
     </div>
-  </div><br>
+  </div>
+</div>
 {% endblock %}
