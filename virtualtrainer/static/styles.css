@@ -2,10 +2,6 @@ body {
   background-color: brown;
 }
 
-.blue {
-  color: #00d9f9;
-}
-
 .btns {
   float: right;
   left: 75%;
@@ -19,6 +15,10 @@ body {
 .inline {
   display: inline;
   padding: 5px 10px;
+  color: #00d9f9;
+}
+
+.inlinehtwo {
 }
 
 .container {
