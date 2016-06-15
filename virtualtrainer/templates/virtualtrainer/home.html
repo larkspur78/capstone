@@ -9,12 +9,12 @@
     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
   </head>
   <body>
-    <div class="wrapped">
-      <div class="homepagephoto">
-      <h1 class="homepagetitle"><a href="{% url 'musclegroups' %}">VIRTUAL TRAINER</a></h1>
+    <div class="homepagephoto"></div>
+    <div class="container">
+      <h1 class="homepagetitle">VIRTUAL TRAINER</h1>
+      <a class="btn-lg btn-default pull-right" href="{% url 'musclegroups' %}" role="button">GET STARTED!</a>
       <h2 class="quotes">Don't Let Starting Stop You</h2>
       <h2 class="quotes">Pay Attention. And Keep Breathing</h2>
-      </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src= "{% static 'quotes.js' %}" type="text/javascript"></script>
