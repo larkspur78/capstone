@@ -54,8 +54,11 @@ def workout(request):
     """
     if request.method == "POST":
         muscle = request.POST.getlist('muscle')
-        exercises = list(Exercise.objects.filter(musclegroup__name__in=muscle))
+        if len(muscle) == 0:
+            template_location = 'virtualtrainer/musclegroups.html'
+            return render(request, template_location,)
 
+        exercises = list(Exercise.objects.filter(musclegroup__name__in=muscle))
         context = {
             'exercises': random.sample(exercises, 4)
         }

@@ -6,6 +6,7 @@ body {
 
 .btns {
   display: inline;
+  color: black;
   padding: 10px 20px;
   border: 0 none;
   font-weight: 600;
@@ -23,6 +24,7 @@ body {
 .inlinetwo {
   text-align: left;
   font-size: 30px;
+  color: black;
 }
 
 .imageback {
@@ -81,12 +83,18 @@ body {
 
 .muscle-group-imgs {
   position: relative;
+  white-space: nowrap;
 }
 
 label {
   position: absolute;
   display: block;
-  border: solid 1px red;
+  cursor: pointer;
+  /*border: solid 1px red;*/
+}
+
+label:hover {
+  background-color: rgba(255, 255, 255, .3);
 }
 
 label[for=back] {
