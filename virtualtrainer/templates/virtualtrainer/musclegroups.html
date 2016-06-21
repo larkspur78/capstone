@@ -5,10 +5,17 @@
 {% endblock %}
 {% block main %}
 {% load static from staticfiles %}
-<h1 class="inlinetwo">CHOOSE THE MUSCLE GROUPS YOU WISH TO STRENGTHEN</h2>
+<h1 class="inlinetwo">CLICK ON THE MUSCLE GROUPS YOU WISH TO STRENGTHEN</h2>
 <div class="container-fluid">
-  <img src="{% static "virtualtrainerimages/front.png" %}" alt="Front"/>
-  <img  src="{% static "virtualtrainerimages/back.png" %}" alt="Back"/>
+  <div class="muscle-group-imgs">
+    <label for="back"></label>
+    <label for="chest"></label>
+    <label for="ab"></label>
+    <label class="backlegs" for="legs"></label>
+    <label class="frontlegs" for="legs"></label>
+    <img src="{% static "virtualtrainerimages/front.png" %}" alt="Front"/>
+    <img  src="{% static "virtualtrainerimages/back.png" %}" alt="Back"/>
+  </div>
   <div class="btns" data-toggle="buttons">
     <div>
       <form action="/workout/" method="post">

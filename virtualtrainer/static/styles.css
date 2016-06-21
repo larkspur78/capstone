@@ -1,10 +1,12 @@
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC:700,400);
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC:700,400|Amarante);
 body {
   background-color: brown;
 }
 
 .btns {
-  float: right;
-  padding: 5px 10px;
+  display: inline;
+  padding: 10px 20px;
   border: 0 none;
   font-weight: 600;
   letter-spacing: 1px;
@@ -15,6 +17,12 @@ body {
   display: inline;
   padding: 5px 10px;
   color: #00d9f9;
+  text-shadow: 4px 4px 8px black;
+}
+
+.inlinetwo {
+  text-align: left;
+  font-size: 30px;
 }
 
 .imageback {
@@ -35,9 +43,9 @@ body {
   box-sizing: border-box;
   width: 100%;
   left: 0;
-  top: 16px;
+  top: 10rem;
   font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif; font-size: 100px; font-style: normal; font-variant: normal; font-weight: 500;
-  padding: 10rem;
+  text-shadow: 4px 4px 8px white;
   color: #00d9f9;
 
 }
@@ -55,7 +63,7 @@ body {
   left: 0;
   width: 100%;
   color: #00d9f9;
-  font-family: 'Arial Black', Gadget, sans-serif; font-size: 25px; font-style: normal; font-variant: normal; font-weight: 300; line-height: 20px;
+  font-family: 'Amatic SC', Gadget, sans-serif; font-size: 60px; font-style: normal; font-variant: normal; font-weight: 500; line-height: 20px;
 }
 
 .homepagephoto {
@@ -69,6 +77,51 @@ body {
   width: 100%;
   vertical-align: middle;
   opacity: .45;
+}
+
+.muscle-group-imgs {
+  position: relative;
+}
+
+label {
+  position: absolute;
+  display: block;
+  border: solid 1px red;
+}
+
+label[for=back] {
+  width: 128px;
+  height: 155px;
+  top: 100px;
+  left: 460px;
+}
+
+label[for=ab] {
+  width: 111px;
+  height: 116px;
+  top: 191px;
+  left: 117px;
+}
+
+label[for=chest] {
+  width: 120px;
+  height: 74px;
+  top: 114px;
+  left: 112px;
+}
+
+.backlegs {
+  width: 131px;
+  height: 374px;
+  top: 259px;
+  left: 463px;
+}
+
+.frontlegs {
+  width: 137px;
+  height: 326px;
+  top: 308px;
+  left: 107px;
 }
 
 /*.container {
@@ -87,4 +140,12 @@ body {
   color: brown;
   float: right;
   margin-top: 1rem;
+}
+
+.exerciseitem {
+  list-style-type: none;
+}
+
+.exerciseitem h3 {
+  text-shadow: 4px 4px 8px white;
 }

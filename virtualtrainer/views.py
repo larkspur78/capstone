@@ -6,10 +6,30 @@ import random
 
 
 def virtualtrainer_home(request):
+    """
+    Generates webpage displaying title of project and call to action
+
+    **Template**
+
+    :template:`virtualtrainer/home.html`
+
+    """
     return render(request, 'virtualtrainer/home.html')
 
 
-def search(request):
+def musclegroups(request):
+    """
+    Generates webpage displaying musclegroups images with clickable regions
+
+    **Template**
+
+    :template:`virtualtrainer/musclegroups.html`
+
+    """
+
+    template_location = 'virtualtrainer/musclegroups.html'
+    return render(request, template_location,)
+
     # muscle = request.POST.getlist('muscle')
     # # print(muscle)
     # context = {
@@ -17,11 +37,21 @@ def search(request):
     #     # 'musclegroups': 'muscles'
     #     'exercises': Exercise.objects.filter(musclegroup__name__in=muscle)
     # }
-    template_location = 'virtualtrainer/musclegroups.html'
-    return render(request, template_location,)
-
 
 def workout(request):
+    """
+    Displays a workout routine as a list of four exercise items
+
+    **Context**
+
+    ``exercises``
+        A randomized list of exercises, instance of :model:`Exercise`
+
+    **Template**
+
+    :template:`virtualtrainer/workout.html`
+
+    """
     if request.method == "POST":
         muscle = request.POST.getlist('muscle')
         exercises = list(Exercise.objects.filter(musclegroup__name__in=muscle))
